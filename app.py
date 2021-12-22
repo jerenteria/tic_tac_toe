@@ -72,7 +72,7 @@ def compMove():
         return move
     
     if 5 in possibleMoves:
-        move - 5
+        move = 5
         return move
 
     edgesOpen = []
@@ -84,7 +84,7 @@ def compMove():
         move = selectRandom(edgesOpen)
         return move
 
-def selectRandom(board):
+def selectRandom(li):
     ln = len(li)
     r = random.randrange(0, ln)
     return li[r]
@@ -125,3 +125,5 @@ def main():
     # if board is full then game is tied and is not over
     if isBoardFull(board):
         print("Tie Game!")
+
+main()
